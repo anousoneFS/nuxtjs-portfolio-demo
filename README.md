@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # nuxtjs-portfolio
 
 ## Build Setup
@@ -67,3 +68,7 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+=======
+# nuxtjs-portfolio-demo
+ອ່ານ-ຂຽນ ບົດຄວາມ, ດຶງ profile github ມາສະແດງ, ດຶງຮູບຈາກ api ມາສະແດງ, basic authen ແບບຄ້າວໆ
+>>>>>>> c8dc72f9fb55c70d279a3b31c9869c5cd5366f38
