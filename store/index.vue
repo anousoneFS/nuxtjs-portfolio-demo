@@ -1,3 +1,3 @@
 export const state = () => ({
-    myState: 0,
+  title: 'Nuxt.js Fundamental by DEVAHOY'
 })

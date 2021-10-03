@@ -9,7 +9,7 @@
       >
         <b-form-input
           id="input-1"
-          v-model="form.email"
+          v-model="email"
           type="email"
           placeholder="Enter email"
           required
@@ -23,7 +23,7 @@
       >
         <b-form-input
           id="input-2"
-          v-model="form.password"
+          v-model="password"
           placeholder="Enter Password"
           required
         ></b-form-input>
@@ -32,23 +32,19 @@
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
-    <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0">{{ form }}</pre>
-    </b-card>
     <div v-show="error">
-      <p>Invalid Password {{error}}</p>
+      <p>Invalid Password {{ error }}</p>
     </div>
   </b-container>
 </template>
 
 <script>
 export default {
+  middleware: 'isLoggedIn',
   data() {
     return {
-      form: {
-        email: '',
-        password: '',
-      },
+      email: '',
+      password: '',
       show: true,
       error: null,
     }
@@ -72,8 +68,8 @@ export default {
     onReset(event) {
       event.preventDefault()
       // Reset our form values
-      this.form.email = ''
-      this.form.password = ''
+      this.email = ''
+      this.password = ''
       // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {

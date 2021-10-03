@@ -1,5 +1,5 @@
 export default {
-  serverMiddleware:["~/api/auth.js"],
+  serverMiddleware: ['~/api/auth.js'],
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxtjs-portfolio',
@@ -70,7 +70,8 @@ export default {
   axios: {
     baseURL: 'http://localhost:3000/api'
   },
-
+  mode: "universal",
+  target: "server",
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 

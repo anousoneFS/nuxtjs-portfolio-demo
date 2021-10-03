@@ -26,6 +26,7 @@
 <script>
 export default {
   async asyncData({ $axios }) {
+    $axios.setHeader('Authorization', null)
     const baseURL = 'https://api.github.com'
     const [user, repos] = await Promise.all([
       $axios.$get(`${baseURL}/users/anousonefs`),

@@ -17,6 +17,7 @@
 
 <script>
 export default {
+    middleware: ['auth'],
     async asyncData({ $content }){
         const posts = await $content('blog').sortBy('createdAt', 'desc').fetch()
         return { posts }
